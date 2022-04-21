@@ -17,6 +17,7 @@ const CounterForm = (props: CounterFormProps) => {
     const onButtonClick = () => {
         const value = parseInt(formValue)
         if (value.toString() === formValue) {
+            setFormValue('');
             props.onSubmit(value)
         } else {
             setIsInvalid(true)
